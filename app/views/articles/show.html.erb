@@ -1,14 +1,17 @@
-<h1>Selected Article</h2>
+<h2 class="text-center mb-3"><%= @article.title %></h2>
 
-<p>
-  Title: <%= @article.title %>
-</p>
+<div class="row mx-1">
+  <div class="bg-secondary col-md-8 offset-md-2 p-4 rounded" style="--bs-bg-opacity: .1;">
+    <h4 class="text-center">Description</h4>
 
-<p>
-  Description: <%= @article.description %>
-</p>
+    <hr>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Delete', article_path(@article),  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> |
+    <%= simple_format(@article.description) %>
 
-<%= link_to 'Back to articles listing', articles_path %>
+    <div class="article-actions">
+      <%= link_to 'Edit article', edit_article_path(@article), class: "btn btn-sm btn-primary" %>
+      <%= link_to 'Delete article', article_path(@article), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-sm btn-danger" %>
+      <%= link_to 'View all articles', articles_path, class: "btn btn-sm btn-success" %>
+    </div>
+  </div>
+</div>

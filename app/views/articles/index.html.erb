@@ -1,22 +1,20 @@
-<h1>All articles</h1>
+<h1 class="text-center mb-3">All articles</h1>
 
-<p>
-  <%= link_to 'Create new article', new_article_path %>
-</p>
+<% @articles.each do |article| %>
+  <div class="row mx-1 mb-4">
+    <div class="bg-secondary col-md-8 offset-md-2 p-4 rounded" style="--bs-bg-opacity: .1;">
+      <div class="article-title">
+        <%= link_to article.title, article_path(article) %>
+      </div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-  </tr>
+      <div class="py-3">
+        <%= truncate(article.description, length: 100) %>
+      </div>
 
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.description %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Delete', article_path(article),  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %></td>
-    </tr>
-  <% end %>
-</table>
+      <div class="article-actions">
+        <%= link_to 'Edit article', edit_article_path(article), class: "btn btn-sm btn-info" %>
+        <%= link_to 'Delete article', article_path(article), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-sm btn-danger" %>
+    </div>
+    </div>
+  </div>
+<% end %>
