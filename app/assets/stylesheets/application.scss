@@ -25,5 +25,34 @@
   text-decoration: none;
   color: blue;
   background-color: #fff;
-  margin: 5px 15px 5px 10px;
+  margin: 5px 15px 5px 0;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+  padding: 50px;
+  background-image: asset-url('home.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 500px;
+  border-radius: 10px;
+
+  h1 {
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+}
+
+.footer {
+  margin-top: 60px;
+  border-top: 2px solid #eaeaea;
+  padding: 12px;
+  width: 100%;
 }
