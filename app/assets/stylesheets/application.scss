@@ -37,7 +37,6 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  // margin-top: 50px;
   padding: 50px;
   background-image: asset-url('home.webp');
   background-size: cover;
@@ -52,6 +51,11 @@
     font-size: 3rem;
     font-weight: bold;
   }
+}
+
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 10px;
 }
 
 .footer {
