@@ -16,6 +16,10 @@
 
 @import "bootstrap";
 
+.container {
+  margin-top: 60px;
+}
+
 #logo {
   font-weight: bold;
   font-size: 1.5rem;
@@ -33,7 +37,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-top: 50px;
+  // margin-top: 50px;
   padding: 50px;
   background-image: asset-url('home.webp');
   background-size: cover;
@@ -55,4 +59,12 @@
   border-top: 2px solid #eaeaea;
   padding: 12px;
   width: 100%;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
