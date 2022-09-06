@@ -9,6 +9,12 @@
 
       <div class="py-3">
         <%= truncate(article.description, length: 100) %>
+        <div class="mt-4">
+          <small class="text-muted">
+            Created by: <%= article.user.username %>, 
+            <%= time_ago_in_words(article.created_at) %> ago
+          </small>
+        </div>
       </div>
 
       <div class="article-actions">
