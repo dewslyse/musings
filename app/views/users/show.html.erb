@@ -7,8 +7,10 @@
         <h3 class="card-title">User Details</h3>
       </div>
       <div class="card-body">
+        <%= gravatar_for @user %>
         <p><strong>Username:</strong> <%= @user.username %></p>
         <p><strong>Email:</strong> <%= @user.email %></p>
+        <p><strong>Number of articles:</strong> <%= @user.articles.count %></p>
       </div>
     </div>
   </div>
