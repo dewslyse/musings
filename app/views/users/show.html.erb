@@ -1,0 +1,44 @@
+<h1 class="text-center">Welcome to <%= @user.username %>'s page</h1>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">User Details</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Username:</strong> <%= @user.username %></p>
+        <p><strong>Email:</strong> <%= @user.email %></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Recent Articles</h3>
+      </div>
+      <div class="card-body">
+        <% if @user.articles.any? %>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Created</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @user.articles.each do |article| %>
+                <tr>
+                  <td><%= link_to article.title, article_path(article) %></td>
+                  <td><%= article.created_at.strftime('%d %B %Y') %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% else %>
+          <p class="text-center">This user has not written any articles yet</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
