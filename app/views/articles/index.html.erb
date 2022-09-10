@@ -1,26 +1,3 @@
 <h1 class="text-center mb-3">All articles</h1>
 
-<% @articles.each do |article| %>
-  <div class="row mx-1 mb-4">
-    <div class="bg-secondary col-md-8 offset-md-2 p-4 rounded" style="--bs-bg-opacity: .1;">
-      <div class="article-title">
-        <%= link_to article.title, article_path(article) %>
-      </div>
-
-      <div class="py-3">
-        <%= truncate(article.description, length: 100) %>
-        <div class="mt-4">
-          <small class="text-muted">
-            Created by: <%= article.user.username %>, 
-            <%= time_ago_in_words(article.created_at) %> ago
-          </small>
-        </div>
-      </div>
-
-      <div class="article-actions">
-        <%= link_to 'Edit article', edit_article_path(article), class: "btn btn-sm btn-info" %>
-        <%= link_to 'Delete article', article_path(article), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-sm btn-danger" %>
-    </div>
-    </div>
-  </div>
-<% end %>
+<%= render 'article', obj: @articles %>
