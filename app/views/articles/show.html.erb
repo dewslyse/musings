@@ -8,6 +8,12 @@
 
     <%= simple_format(@article.description) %>
 
+    <div class="mt-4">
+      <small class="text-muted">
+        Written by: <%= @article.user.username %>
+      </small>
+    </div>
+
     <div class="article-actions">
       <%= link_to 'Edit article', edit_article_path(@article), class: "btn btn-sm btn-primary" %>
       <%= link_to 'Delete article', article_path(@article), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-sm btn-danger" %>
