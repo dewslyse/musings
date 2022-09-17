@@ -22,3 +22,7 @@
     </div>
   </div>
 <% end %>
+
+<div class="mt-5 d-flex justify-content-center">
+  <%= will_paginate(@users, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+</div>
