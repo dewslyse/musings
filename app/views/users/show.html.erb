@@ -9,7 +9,11 @@
 <h3 class="text-center mb-4"><%= @user.username %>'s articles</h3>
 
 <% if @user.articles.any? %>
-  <%= render 'articles/article', obj: @user.articles %>
+  <%= render 'articles/article', obj: @user_articles %>
 <% else %>
   <p class="text-center">This user has not written any articles yet</p>
 <% end %>
+
+<div class="mt-5 d-flex justify-content-center">
+  <%= will_paginate(@user_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+</div>
