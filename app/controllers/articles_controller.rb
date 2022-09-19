@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[edit update show destroy]
+  before_action :require_user, except: %i[index show]
+  before_action :require_same_user, only: %i[edit update destroy]
 
   def index
     @articles = Article.paginate(page: params[:page], per_page: 5).order('created_at DESC')
@@ -48,5 +50,12 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title, :description)
+  end
+
+  def require_same_user
+    return unless current_user != @article.user
+
+    flash[:danger] = 'You cannot perform this action'
+    redirect_to root_path
   end
 end
