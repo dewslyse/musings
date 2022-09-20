@@ -13,10 +13,14 @@
       </div>
 
       <div class="py-3">
-        <div class="mt-4">
+        <div class="mt-4 d-flex justify-content-between">
           <small class="text-muted">
             <%= pluralize(user.articles.count, "article") if user.articles %> 
           </small>
+
+          <% if logged_in? && current_user.admin? %>
+            <%= link_to 'Delete user', user_path(user), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-sm btn-danger" %>
+          <% end %>
         </div>
       </div>
     </div>
