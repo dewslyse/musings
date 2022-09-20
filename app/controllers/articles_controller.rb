@@ -53,7 +53,7 @@ class ArticlesController < ApplicationController
   end
 
   def require_same_user
-    return unless current_user != @article.user
+    return unless current_user != @article.user and !current_user.admin?
 
     flash[:danger] = 'You cannot perform this action'
     redirect_to root_path
