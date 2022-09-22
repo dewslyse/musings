@@ -1,0 +1,13 @@
+<h1 class="text-center mb-3">All categories</h1>
+
+<% @categories.each do |category| %>
+  <div class="row mx-1 mb-4">
+    <div class="bg-secondary col-md-8 offset-md-2 p-4 rounded" style="--bs-bg-opacity: .1;">
+      <div class="article-title category-title text-center">
+        <div>
+          <%= link_to category.name, category_path(category) %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
