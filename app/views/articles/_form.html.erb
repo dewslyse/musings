@@ -21,6 +21,17 @@
 
   <div class="row mb-3">
     <div class="offset-md-2 col-sm-10">
+      <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |opt| %>
+        <div class="form-check form-check-inline">
+          <%= opt.check_box class: "form-check-input" %>
+          <%= opt.label class: "form-check-label" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="offset-md-2 col-sm-10">
       <%= f.submit class: "btn btn-primary btn-lg" %>
     </div>
   </div>
