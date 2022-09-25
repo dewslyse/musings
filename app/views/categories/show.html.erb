@@ -1,0 +1,13 @@
+<h1 class="text-center mb-3"><%= "Category: " + @category.name %></h1>
+
+<%= render 'articles/article', obj: @category_articles %>
+
+<% if @category_articles.empty? %>
+  <div class="alert alert-info text-center">
+    No articles found in this category
+  </div>
+<% end %>
+
+<div class="mt-5 d-flex justify-content-center">
+  <%= will_paginate(@category_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+</div>

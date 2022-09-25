@@ -6,6 +6,7 @@
       <div class="article-title category-title text-center">
         <div>
           <%= link_to category.name, category_path(category) %>
+          <li class="badge bg-info"><%= category.articles.count %></li>
         </div>
       </div>
     </div>
