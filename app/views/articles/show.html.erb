@@ -8,6 +8,10 @@
 
     <%= simple_format(@article.description) %>
 
+    <% if @article.categories.any? %>
+      <p>Categories: <%= render @article.categories %></p>
+    <% end %>
+
     <div class="mt-4">
       <small class="text-muted">
         Written by: <%= @article.user.username %>
