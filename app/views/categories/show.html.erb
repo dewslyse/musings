@@ -1,4 +1,12 @@
-<h1 class="text-center mb-3"><%= "Category: " + @category.name %></h1>
+<h1 class="text-center mb-1"><%= "Category: " + @category.name %></h1>
+
+<div class="text-center mb-3">
+  <% if logged_in? and current_user.admin? %>
+    <span class="badge">
+      <%= link_to 'Edit category name', edit_category_path(@category) %>
+    </span>
+  <% end %>
+</div>
 
 <%= render 'articles/article', obj: @category_articles %>
 
