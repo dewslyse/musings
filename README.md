@@ -53,6 +53,11 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
+## Acknowledgments
+
+- Mashrur Hossain (The Complete Ruby on Rails Developer Course)
+
+
 ## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
