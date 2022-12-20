@@ -1,26 +1,63 @@
-# Blog App
+# Blog app
 
 > The blog app is a classic example of a blog website. It shows a list of posts and empowers readers to interact with them by adding comments and likes.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version: `ruby 3.1.2`
+- Ruby `3.1.2`
+- Rails `7.0.3`
 
-* System dependencies
 
-* Configuration
+## Getting Started
 
-* Database creation
+### Prerequisites
 
-* Database initialization
+- Ruby
 
-* How to run the test suite
+### Setup
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy up and running follow this simple step:
 
-* Deployment instructions
+- Clone repository to your local machine: 
+`git@github.com:dewslyse/dews-blog.git`
+This will create a directory in the name of the project folder.
 
-* ...
+- Navigate to project folder using `cd dews-blog`
+
+### Install
+
+- Run `bundle install` to install all gems for the project.
+
+### Usage
+
+- Run `rails s` to start the server
+- Open `http://127.0.0.1:3000/` in your browser to use the app
+
+### Tests
+- Run `rspec` to run the tests
+
+## Authors
+
+👤 **@dewslyse**
+
+- GitHub: [@dewslyse](https://github.com/dewslyse)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Mashrur Hossain (The Complete Ruby on Rails Developer Course)
+
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
