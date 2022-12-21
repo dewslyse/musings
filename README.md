@@ -5,7 +5,7 @@
 
 ## Built With
 
-- Ruby `3.1.2`
+- Ruby `3.1.3`
 - Rails `7.0.3`
 
 
