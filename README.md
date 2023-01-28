@@ -30,6 +30,20 @@ This will create a directory in the name of the project folder.
 
 - Run `bundle install` to install all gems for the project.
 
+
+### Create database
+- In the `config/` directory, create a new file with the name `local_env.yml` and add the following code:
+
+```
+DATABASE_USERNAME: 'Your-PostgreSQL-Username'
+DATABASE_PASSWORD: 'Your-PostgreSQL-Password'
+```
+- Create the database by running: 
+
+```
+$ rails db:create
+```
+
 ### Usage
 
 - Run `rails s` to start the server
