@@ -1,6 +1,7 @@
-# Blog app
+# Musings (Blog app)
 
-> The blog app is a classic example of a blog website. It shows a list of posts and empowers readers to interact with them by adding comments and likes.
+> Musings is a classic example of a blog website. Users can add their articles and also filter articles based on categories.
+<!-- It shows a list of posts and empowers readers to interact with them by adding comments and likes. -->
 
 
 ## Built With
@@ -20,10 +21,10 @@
 To get a local copy up and running follow this simple step:
 
 - Clone repository to your local machine: 
-`git@github.com:dewslyse/dews-blog.git`
+`git@github.com:dewslyse/musings.git`
 This will create a directory in the name of the project folder.
 
-- Navigate to project folder using `cd dews-blog`
+- Navigate to project folder using `cd musings`
 
 ### Install
 
