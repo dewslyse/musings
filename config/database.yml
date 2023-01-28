@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: dews_blog_production
-  username: dews_blog
-  password: <%= ENV["DEWS_BLOG_DATABASE_PASSWORD"] %>
+  database: musings_production
+  username: musings
+  password: <%= ENV["MUSINGS_DATABASE_PASSWORD"] %>
