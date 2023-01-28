@@ -45,11 +45,32 @@
   height: 500px;
   border-radius: 10px;
 
+  .caption-box {
+    // background-color: #cef6f5;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px 15px;
+    border-radius: 8px;
+    margin-bottom: 15rem;
+  }
+
   h1 {
     text-transform: uppercase;
-    margin-bottom: 60px;
     font-size: 3rem;
     font-weight: bold;
+    border: 2px solid #cef6f5;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 10px 5px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  p {
+    background-color: #cef6f5;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: -5px;
   }
 
   .btn {
